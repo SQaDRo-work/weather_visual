@@ -1,0 +1,24 @@
+{
+  "name": "weather_visual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -watch assets/css -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SQaDRo-work/weather_visual.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SQaDRo-work/weather_visual/issues"
+  },
+  "homepage": "https://github.com/SQaDRo-work/weather_visual#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
