@@ -20,13 +20,13 @@ class ChartTemplates {
     }
 
     static ox_legend(options) {
-        return `<text x="${options.x_pos}" y="${options.y_pos}" class="chart-date-legend-text" transform="rotate(90, ${options.x_pos}, ${options.y_pos})">${options.text}</text>`;
+        return `<text x="${options.x_pos}" y="${options.y_pos}" class="chart-date-legend-text" transform="rotate(270, ${options.x_pos}, ${options.y_pos})">${options.text}</text>`;
     }
 
     static chart_dot(options) {
         return `<circle cx="${options.x_pos}" cy="${options.y_pos}" r="3" class="chart-dot"/>`;
     }
-    
+
     static chart_line(options) {
         return `<path d="${options.d_points}" class="chart-line"/>`
     }
