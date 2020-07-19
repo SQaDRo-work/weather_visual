@@ -3,6 +3,8 @@ class DataExtractor {
         this.end_point = "api.openweathermap.org";
         this.query_params = {
             q: "Moscow",
+            units: "metric",
+            lang: 'ru',
             appid: "c41e47bdc77ee3a9b612935e28ebc444"
         }
         this.data;
@@ -21,6 +23,7 @@ class DataExtractor {
             dataType: "json",
             success: function(response){
                 self.data = $.extend(true, {}, response);
+                table.build_table(true);
             }
         });
     }
