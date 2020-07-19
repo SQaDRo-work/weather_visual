@@ -17,7 +17,7 @@ class DataExtractor {
     get_one_call_data() {
         let self = this;
         $.ajax({
-            url: `https://${this.end_point}/data/2.5/forecast`,
+            url: `http://${this.end_point}/data/2.5/forecast`,
             method: "GET",
             data: this.query_params,
             dataType: "json",
