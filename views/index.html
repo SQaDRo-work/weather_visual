@@ -126,6 +126,17 @@
                         <option value="Barcelona">Барселона</option>
                         <option value="Beijing">Пекин</option>
                     </select>
+
+                    <select class="custom-select" onchange="change_chart_type(this);">
+                        <option selected value="temp">Температура</option>
+                        <option value="feels_like">Ощущается как</option>
+                        <option value="temp_min">Минимальная температура</option>
+                        <option value="temp_max">Максимальная температура</option>
+                        <option value="pressure">Атмосферное давление</option>
+                        <option value="sea_level">Давление над уровнем моря</option>
+                        <option value="grnd_level">Давление над уровнем земли</option>
+                        <option value="humidity">Влажность</option>
+                    </select>
                 </div>
                 <div id="chart-main-container">
 
