@@ -15,7 +15,7 @@ class Table {
     build_header() {
         let header_els = '';
         $.each(this.config.columns, function(i, column){
-            header_els += TableTemplates.header_el(column.label);
+            header_els += TableTemplates.header_el(column.name, column.sort, column.label);
         });
         return TableTemplates.header(header_els);
     }
@@ -60,5 +60,14 @@ class Table {
             }
             return 0;
         }));
+    }
+
+    change_sort(column_name) {
+        if (this.config.sort[0] != column_name) {
+            this.config.sort = [column_name, 'asc'];
+        } else {
+            this.config.sort[1] = this.config.sort[1] == 'asc' ? 'desc' : 'asc';
+        }
+        this.build_table(false);
     }
 }

@@ -7,8 +7,9 @@ class TableTemplates {
         return `<thead class="table-header"><tr class="table-header-row">${header_elements_html}</tr></thead>`;
     }
 
-    static header_el(label) {
-        return `<th class='table-header-cell'>${label}</th>`;
+    static header_el(column_name, is_sorted, label) {
+        let sort_handler = is_sorted ? `onclick='table.change_sort("${column_name}");'` : '';
+        return `<th class='table-header-cell' ${sort_handler}>${label}</th>`;
     }
 
     static body(body_elements_html) {
