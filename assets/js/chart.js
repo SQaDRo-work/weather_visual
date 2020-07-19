@@ -80,8 +80,8 @@ class Chart {
                 y_pos: y_pos
             });
         }
-        oy_legend_html = ChartTemplates.oy_legend_wrapper(oy_legend_html);
-        oy_horizontal_lines = ChartTemplates.horizontal_lines_wrapper(oy_horizontal_lines);
+        oy_legend_html = ChartTemplates.wrap_group(oy_legend_html, 'oy-legend-wrapper');
+        oy_horizontal_lines = ChartTemplates.wrap_group(oy_horizontal_lines, 'horizontal-lines-wrapper');
         return oy_legend_html + oy_horizontal_lines;
     }
 
@@ -102,8 +102,8 @@ class Chart {
                 y_pos: y_pos
             });
         }
-        ox_legend_html = ChartTemplates.ox_legend_wrapper(ox_legend_html);
-        ox_vertical_lines = ChartTemplates.vertical_lines_wrapper(ox_vertical_lines);
+        ox_legend_html = ChartTemplates.wrap_group(ox_legend_html, 'ox-legend-wrapper');
+        ox_vertical_lines = ChartTemplates.wrap_group(ox_vertical_lines, 'vertical-lines-wrapper');
         return ox_legend_html + ox_vertical_lines;
     }
 
@@ -113,12 +113,6 @@ class Chart {
         let x_pos = this.setting.x_pos_chart;
         let d_points = '';
         for (let i = 0; i < this.chart_data.oy_data.length; i++) {
-            console.log({
-                height: this.setting.chart_height,
-                start: this.setting.y_pos_chart,
-                value: this.chart_data.oy_data[i].value - Math.floor(this.setting.min_oy),
-                scale: this.setting.scale
-            })
             let y_pos = this.setting.chart_height - this.setting.y_pos_chart - (this.chart_data.oy_data[i].value - Math.floor(this.setting.min_oy)) * this.setting.scale;
             dots_html += ChartTemplates.chart_dot({
                 x_pos: x_pos,
@@ -127,8 +121,8 @@ class Chart {
             d_points += `${i == 0 ? 'M' : 'L'}${x_pos} ${y_pos} `;
             x_pos += this.setting.ox_step;
         }
-        line_html = ChartTemplates.chart_dot_wrapper(dots_html);
-        dots_html = ChartTemplates.chart_line_wrapper(ChartTemplates.chart_line({d_points: d_points}));
+        line_html = ChartTemplates.wrap_group(dots_html, 'chart-dots-wrapper');
+        dots_html = ChartTemplates.wrap_group(ChartTemplates.chart_line({d_points: d_points}), 'chart-line-wrapper');
         return line_html + dots_html;
     }
 
