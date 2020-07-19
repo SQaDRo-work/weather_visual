@@ -5,11 +5,18 @@ class Table {
     }
 
     build_table(with_formate) {
-        if (with_formate) this.formate_data();
+        if (with_formate) {
+            this.clear_data();
+            this.formate_data();
+        }
         this.sort_data();
         let header = this.build_header();
         let body = this.build_body();
         $(this.config.selector).html(TableTemplates.table(header + body));
+    }
+
+    clear_data() {
+        this.table_data = [];
     }
 
     build_header() {
