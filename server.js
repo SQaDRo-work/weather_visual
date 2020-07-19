@@ -9,4 +9,4 @@ app.get('/', function(req, res) {
   res.sendfile('views/index.html');
 });
 
-app.listen(8080);
+app.listen(3000);
