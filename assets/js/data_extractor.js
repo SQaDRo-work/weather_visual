@@ -16,6 +16,7 @@ class DataExtractor {
     
     get_one_call_data() {
         let self = this;
+        trobber_toggle(true);
         $.ajax({
             url: `${this.end_point}/data/2.5/forecast`,
             method: "GET",
@@ -25,6 +26,7 @@ class DataExtractor {
                 self.data = $.extend(true, {}, response);
                 table.build_table(true);
                 chart.build_chart();
+                trobber_toggle(false);
             }
         });
     }

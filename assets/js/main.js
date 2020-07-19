@@ -15,3 +15,8 @@ function change_chart_type(select) {
     chart.config.chart_column = chart_type;
     chart.build_chart();
 }
+
+function trobber_toggle(show) {
+    let trobber = $('#trobber');
+    show ? trobber.show() : trobber.hide();
+}
