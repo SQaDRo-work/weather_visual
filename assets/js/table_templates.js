@@ -4,25 +4,19 @@ class TableTemplates {
     }
 
     static header(header_elements_html) {
-        let html_string = '';
-        html_string += '<thead class="table-header">';
-        html_string += '<tr class="table-header-row">';
-        html_string += header_elements_html;
-        html_string += '</tr></thead>';
-        return html_string;
+        return `<thead class="table-header"><tr class="table-header-row">${header_elements_html}</tr></thead>`;
     }
 
     static header_el(label) {
         return `<th class='table-header-cell'>${label}</th>`;
     }
 
-    static body(body_element_html) {
-        let html_string = '';
-        html_string += '<tbody class="table-body">';
-        html_string += '<tr class="table-body-row">';
-        html_string += body_element_html;
-        html_string += '</tr></tbody>';
-        return html_string;
+    static body(body_elements_html) {
+        return `<tbody class="table-body">${body_elements_html}</tbody>`;
+    }
+
+    static row(row_elements_html) {
+        return `<tr class="table-body-row">${row_elements_html}</tr>`;
     }
 
     static body_el(formated_value) {

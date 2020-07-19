@@ -2,7 +2,6 @@ class Table {
     constructor(data) {
         this.config = $.extend(true, {}, table_config);
         this.table_data = [];
-        console.log(this.config);
     }
 
     build_table(with_formate) {
@@ -28,9 +27,9 @@ class Table {
              $.each(row, function(j, column){
                 row_els += TableTemplates.body_el(column.formated);
              })
-             body_els += TableTemplates.body(row_els);
+             body_els += TableTemplates.row(row_els);
         });
-        return body_els;
+        return TableTemplates.body(body_els);
     }
 
     formate_data() {
