@@ -117,26 +117,32 @@
           
               <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                 <div id="filters-container">
-                    <select class="custom-select" onchange="change_city(this);">
-                        <option selected value="Moscow">Москва</option>
-                        <option value="Amsterdam">Амстердам</option>
-                        <option value="Athens">Афины</option>
-                        <option value="Baghdad">Багдад</option>
-                        <option value="Bangkok">Бангкок</option>
-                        <option value="Barcelona">Барселона</option>
-                        <option value="Beijing">Пекин</option>
-                    </select>
+                    <div class="filter-block">
+                        <label class="filter-label">Выберите город:</label>
+                        <select class="select-city custom-select" onchange="change_city(this);">
+                            <option selected value="Moscow">Москва</option>
+                            <option value="Amsterdam">Амстердам</option>
+                            <option value="Athens">Афины</option>
+                            <option value="Baghdad">Багдад</option>
+                            <option value="Bangkok">Бангкок</option>
+                            <option value="Barcelona">Барселона</option>
+                            <option value="Beijing">Пекин</option>
+                        </select>
+                    </div>
 
-                    <select class="custom-select" onchange="change_chart_type(this);">
-                        <option selected value="temp">Температура</option>
-                        <option value="feels_like">Ощущается как</option>
-                        <option value="temp_min">Минимальная температура</option>
-                        <option value="temp_max">Максимальная температура</option>
-                        <option value="pressure">Атмосферное давление</option>
-                        <option value="sea_level">Давление над уровнем моря</option>
-                        <option value="grnd_level">Давление над уровнем земли</option>
-                        <option value="humidity">Влажность</option>
-                    </select>
+                    <div class="filter-block">
+                        <label class="filter-label">Выберите атрибут графика:</label>
+                        <select class="select-chart-type custom-select" onchange="change_chart_type(this);">
+                            <option selected value="temp">Температура</option>
+                            <option value="feels_like">Ощущается как</option>
+                            <option value="temp_min">Минимальная температура</option>
+                            <option value="temp_max">Максимальная температура</option>
+                            <option value="pressure">Атмосферное давление</option>
+                            <option value="sea_level">Давление над уровнем моря</option>
+                            <option value="grnd_level">Давление над уровнем земли</option>
+                            <option value="humidity">Влажность</option>
+                        </select>
+                    </div>
                 </div>
                 <div id="chart-main-container">
 

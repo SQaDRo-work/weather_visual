@@ -9,7 +9,7 @@ class TableTemplates {
 
     static header_el(column_name, is_sorted, label) {
         let sort_handler = is_sorted ? `onclick='table.change_sort("${column_name}");'` : '';
-        return `<th class='table-header-cell' ${sort_handler}>${label}</th>`;
+        return `<th class='table-cell table-header-cell' ${sort_handler}>${label}</th>`;
     }
 
     static body(body_elements_html) {
@@ -21,6 +21,6 @@ class TableTemplates {
     }
 
     static body_el(formated_value) {
-        return `<td class="table-body-cell">${formated_value}</td>`;
+        return `<td class="table-cell table-body-cell">${formated_value}</td>`;
     }
 }

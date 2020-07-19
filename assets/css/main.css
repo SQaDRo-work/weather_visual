@@ -14,17 +14,21 @@
 
 .chart-legend-text {
     text-anchor: end;
+    font-weight: 500;
+    fill: #afafaf;
 }
 
 .chart-date-legend-text {
     text-anchor: middle;
     dominant-baseline: central;
+    font-weight: 500;
+    fill: #afafaf;
 }
 
 .chart-horizontal-line,
 .chart-vertical-line {
     fill: none;
-    stroke: black;
+    stroke: #afafaf;
     stroke-width: 1;
     opacity: 1;
 }
@@ -33,4 +37,36 @@
     fill: none;
     stroke: black;
     stroke-width: 2px;
+}
+
+.filter-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px;
+    margin-right: 10px;
+    line-height: 38px;
+}
+
+.custom-select {
+    width: 300px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.filter-block:not(:first-child) {
+    margin-top: 10px;
+}
+
+main {
+    padding-top: 20px;
+}
+
+.table-cell {
+    text-align: center;
+    border: 1px solid;
+    padding: 0 10px;
+}
+
+.table-header-cell {
+    background-color: #d6d6d6;
 }
