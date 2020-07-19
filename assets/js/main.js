@@ -20,3 +20,7 @@ function trobber_toggle(show) {
     let trobber = $('#trobber');
     show ? trobber.show() : trobber.hide();
 }
+
+$(window).on('resize', function(){
+    chart.build_chart();
+})

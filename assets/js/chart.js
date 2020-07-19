@@ -32,7 +32,7 @@ class Chart {
             oy_step: null,
             count_oy_steps: 4,
             x_pos_chart: 70,
-            y_pos_chart: 150,
+            y_pos_chart: 130,
             chart_width: 0,
             chart_height: 0
         }
