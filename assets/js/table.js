@@ -12,7 +12,7 @@ class Table {
         this.sort_data();
         let header = this.build_header();
         let body = this.build_body();
-        $(this.config.selector).html(TableTemplates.table(header + body));
+        $(this.config.table_selector).html(TableTemplates.table(header + body));
     }
 
     clear_data() {

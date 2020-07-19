@@ -1,7 +1,7 @@
 types_config = {
     date_time: {
         format: function(value) {
-            return moment(value, 'X').format('MM.DD.YYYY HH:mm:ss');
+            return moment(value, 'X').format('DD.MM.YYYY HH:mm');
         }
     },
     temp: {

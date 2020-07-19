@@ -1,3 +1,36 @@
 #body {
     background-color: white;
 }
+
+#chart-main-container {
+    min-height: 300px;
+    margin-top: 40px;
+    overflow: visible;
+}
+
+.chart-svg-block {
+    overflow: visible;
+}
+
+.chart-legend-text {
+    text-anchor: end;
+}
+
+.chart-date-legend-text {
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.chart-horizontal-line,
+.chart-vertical-line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1;
+    opacity: 1;
+}
+
+.chart-line {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}

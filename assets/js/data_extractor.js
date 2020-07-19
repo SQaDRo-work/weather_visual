@@ -24,6 +24,7 @@ class DataExtractor {
             success: function(response){
                 self.data = $.extend(true, {}, response);
                 table.build_table(true);
+                chart.build_chart();
             }
         });
     }
